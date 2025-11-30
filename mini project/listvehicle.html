@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Vehicle | ShareMyRide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="listvehicle.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="vehicle.html" class="logo">
+                    <i class="fas fa-car"></i>
+                    <span>ShareMyRide</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="vehicle.html">Browse Vehicles</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                
+                <div class="user-actions">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #3498db; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 10px;">U</div>
+                        <span><a href="myprofile.html">My Profile</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="back-to-marketplace">
+        <a href="vehicle.html">
+            <i class="fas fa-arrow-left"></i>
+            Back to Vehicle Booking
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="list-vehicle-hero">
+        <div class="container">
+            <h1>List Your Vehicle and Start Earning</h1>
+            <p>Join thousands of vehicle owners earning extra income by sharing their cars with trusted renters in your community.</p>
+        </div>
+    </section>
+
+    <!-- Main Form -->
+    <div class="container">
+        <div class="form-container">
+            <form action="vehicle.html" method="get">
+                <!-- Vehicle Details Section -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Vehicle Details</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="make">Name Of Vehicle</label>
+                            <input type="text" class="form-select" id="make" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="model">Model</label>
+                            <input type="text" class="form-input" id="model" placeholder="e.g., Camry, Civic, F-150" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="year">Year *</label>
+                            <input type="date" class="form-select" id="year" required>
+                                
+                            
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="type">Vehicle Type *</label>
+                            <select class="form-select" id="type" required>
+                                <option value="">Select Type</option>
+                                <option value="sedan">Car</option>
+                                <option value="suv">Activa</option>
+                                <option value="truck">Bike</option>
+                                <option value="van">Van</option>
+                                <option value="coupe">Other</option>
+                                
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="color">Color</label>
+                            <input type="text" class="form-input" id="color" placeholder="e.g., Blue, Silver, Black">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="license">License Plate *</label>
+                            <input type="text" class="form-input" id="license" placeholder="e.g., ABC123" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location & Availability -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Location & Availability</h2>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label class="form-label" for="address">Pickup Address *</label>
+                            <input type="text" class="form-input" id="address" placeholder="Where will renters pick up the vehicle?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="city">City *</label>
+                            <input type="text" class="form-input" id="city" placeholder="e.g., San Francisco" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="zipcode">ZIP Code *</label>
+                            <input type="text" class="form-input" id="zipcode" placeholder="e.g., 94102" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Pricing</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="daily-rate">Daily Rate (&#8377;)</label>
+                            <input type="number" class="form-input" id="daily-rate" placeholder="0.00" min="1" step="0.01" required>
+                            <div class="form-hint">Recommended: &#8377;300-800 per day</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="weekly-discount">Weekly Discount %</label>
+                            <input type="number" class="form-input" id="weekly-discount" placeholder="10" min="0" max="50">
+                            <div class="form-hint">Optional discount for weekly rentals</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-display">
+                        
+                        <div class="estimated-earnings">Average Estimated earnings: &#8377;5000-20000/month</div>
+                    </div>
+                </div>
+
+                <!-- Photos -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Vehicle Photos</h2>
+                    <div class="upload-area">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="upload-text">
+                             click to browse</div>
+                        <div class="upload-btn">
+                            <label for="fileUpload" class="upload-btn">Upload File</label>
+                             <input type="file" id="fileUpload">
+
+                         </div>
+                        <div class="form-hint">Upload 5-10 clear photos showing exterior, interior, and features</div>
+                    </div>
+                    
+                    <div class="preview-images">
+                        <div class="preview-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="preview-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="preview-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="preview-image">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features & Description -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Features & Description</h2>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="description">Vehicle Description *</label>
+                        <textarea class="form-textarea" id="description" placeholder="Describe your vehicle, its condition, special features, and why renters would love it..." required></textarea>
+                    </div>
+                    
+                    
+
+                        
+                </div>
+                </div>
+
+                <!-- Rental Settings -->
+                <div class="form-section">
+                    <h2 class="form-section-title">Rental Settings</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="advance-notice">Advance Notice</label>
+                            <select class="form-select" id="advance-notice">
+                                <option value="1">1 hour</option>
+                                <option value="6">6 hours</option>
+                                <option value="24" selected>24 hours</option>
+                                <option value="48">48 hours</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="trip-length">Minimum Trip Length</label>
+                            <select class="form-select" id="trip-length">
+                                <option value="1">1 day</option>
+                                <option value="2">2 days</option>
+                                <option value="3" selected>3 days</option>
+                                <option value="7">7 days</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-success">
+                        <i class="fas fa-check-circle"></i>
+                        List My Vehicle
+                    </button>
+                    <button type="button" class="btn-secondary">
+                        Save as Draft
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem; color: #2c3e50; margin-bottom: 20px;">Why List with AutoShare?</h2>
+            <p style="text-align: center; color: #666; max-width: 600px; margin: 0 auto 40px;">Join the leading peer-to-peer car sharing platform and start earning today.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Full Protection</h3>
+                    <p>Comprehensive insurance coverage and 24/7 roadside assistance for complete peace of mind.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Earn More</h3>
+                    <p>Vehicle owners earn an average of &#8377;5000-20000 per month by sharing their idle cars.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Trusted Community</h3>
+                    <p>All renters are verified with driver's license checks and community reviews.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShareMyRide</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                       
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Vehicle Owners</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">List Your Vehicle</a></li>
+                        
+                        <li><a href="#">Insurance Info</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Safety</a></li>
+                        <li><a href="#">Dispute Resolution</a></li>
+                    </ul>
+                </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShareMyRide. All rights reserved.</p>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
